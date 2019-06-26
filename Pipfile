@@ -6,15 +6,19 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-ebooklib = "*"
-jupyter = "*"
-jupyterlab = ">=1.0.0a0"
+altair = "*"
 beautifulsoup4 = "*"
+ebooklib = "*"
+ipywidgets = "*"
+jupyterlab = ">=1.0.0a0"
 nltk = "*"
 numpy = "*"
-altair = "*"
-vega-datasets = "*"
+pandas = "*"
 vega = "*"
+vega-datasets = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true

@@ -1,2 +1,5 @@
 books/unfree/**
+
 .ipynb_checkpoints/
+
+.vscode/
