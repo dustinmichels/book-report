@@ -7,9 +7,5 @@ Analysis & data visualization of ePub files _[work-in-progress]_
 ```bash
 brew install pipenv
 pipenv install
-
-jupyter nbextension enable --py widgetsnbextension --sys-prefix
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
-
 python -m nltk.downloader all
 ```

@@ -4,12 +4,14 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+black = "*"
+pylint = "*"
+mypy = "*"
 
 [packages]
 altair = "*"
 beautifulsoup4 = "*"
 ebooklib = "*"
-ipywidgets = "*"
 jupyterlab = ">=1.0.0a0"
 nltk = "*"
 numpy = "*"
