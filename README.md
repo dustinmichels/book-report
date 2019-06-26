@@ -7,5 +7,7 @@ Analysis & data visualization of ePub files _[work-in-progress]_
 ```bash
 brew install pipenv
 pipenv install
+
 python -m nltk.downloader all
+brew cask install chromedriver
 ```
