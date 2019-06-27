@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vega-actions a {
+        margin-right: 12px;
+        color: #757575;
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.3.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+      var spec = {"config": {"view": {"width": 400, "height": 300}, "mark": {"tooltip": null}}, "data": {"name": "data-cdf85f303a267fd42d30500b55806855"}, "mark": "bar", "encoding": {"tooltip": [{"type": "nominal", "field": "chapter"}, {"type": "quantitative", "field": "word_count"}], "x": {"type": "quantitative", "field": "word_count", "title": "Word Count"}, "y": {"type": "nominal", "field": "chapter", "title": "Chapter"}}, "selection": {"selector001": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "$schema": "https://vega.github.io/schema/vega-lite/v3.3.0.json", "datasets": {"data-cdf85f303a267fd42d30500b55806855": [{"chapter": "01 - ROOTS", "word_count": 2360}, {"chapter": "02 - NICHOLAS HOEL", "word_count": 40451}, {"chapter": "03 - MIMI MA", "word_count": 44610}, {"chapter": "04 - ADAM APPICH", "word_count": 32358}, {"chapter": "05 - RAY BRINKMAN AND DOROTHY CAZALY", "word_count": 16053}, {"chapter": "06 - DOUGLAS PAVLICEK", "word_count": 38900}, {"chapter": "07 - NEELAY MEHTA", "word_count": 42932}, {"chapter": "08 - PATRICIA WESTERFORD", "word_count": 69615}, {"chapter": "09 - OLIVIA VANDERGRIFF", "word_count": 15499}, {"chapter": "10 - TRUNK", "word_count": 386394}, {"chapter": "11 - CROWN", "word_count": 239534}, {"chapter": "12 - SEEDS", "word_count": 56126}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+
+  </script>
+</body>
+</html>
